@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>arrowleft</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3.04018753,10 L11.0542403,17.8849059 C11.5460225,18.3687629 11.5460225,19.1532502 11.0542403,19.6371072 C10.5624582,20.1209643 9.76512183,20.1209643 9.27333971,19.6371072 L0.368836595,10.8761007 C-0.122945532,10.3922436 -0.122945532,9.60775638 0.368836595,9.12389934 L9.27333971,0.362892774 C9.76512183,-0.120964258 10.5624582,-0.120964258 11.0542403,0.362892774 C11.5460225,0.846749806 11.5460225,1.63123706 11.0542403,2.11509409 L3.04018753,10 Z" id="path-1"></path>
+    </defs>
+    <g id="CO2MMUTING" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-3" transform="translate(-410.000000, -176.000000)">
+            <g id="Group" transform="translate(410.000000, 170.000000)">
+                <g id="arrowleft" transform="translate(0.000000, 6.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Path" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

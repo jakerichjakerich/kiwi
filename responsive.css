@@ -1,0 +1,11 @@
+@media (max-width: 1000px) {
+
+  .user-form {
+    background-color: yellow;
+    width: 670px;
+
+    .content-list {
+      width: 670px;
+
+
+}

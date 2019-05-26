@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  font-family: "Montserrat";
+}
+
+sub {
+  vertical-align: baseline;
+  position: relative;
+  top: 0.4em;
+}
+
+
+/* __________________TOP HEADER__________________ */
+
+.top-wrapper {
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(#00A586, #00FDCD);
+  position: fixed;
+  z-index: 10;
+  overflow: auto;
+}
+
+.kiwi-logo {
+  float: left;
+  width: 66px;
+  margin-top: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.navbar {
+  float: right;
+  text-align: right;
+  vertical-align: center;
+  width: 66px;
+  height: 24px;
+  margin-top: 36px;
+  margin-right: 50px;
+  color: white;
+  font-size: 21px;
+  font-family: 'Montserrat';
+  font-weight: 530;
+  cursor: pointer;
+  text-decoration: none
+}
+
+.navbar:hover {
+    text-decoration: underline;
+}
+
+/* __________________IMAGE__________________ */
+.landing-page-wrapper {
+  width: 960px;
+  margin: auto;
+  position: relative;
+  padding-top: 60px;
+}
+
+.landing-page-wrapper img {
+  width: 900px;
+}
+
+.subheading {
+  color: #008666;
+  font-size: 21px;
+  font-family: 'Montserrat';
+  font-weight: 550;
+  padding-top: 10px;
+  padding-bottom: 80px;
+}
+
+footer {
+  width: 100%;
+  margin: auto;
+  background-color: none;
+  position: absolute;
+  top: 700px;
+  bottom: 0;
+  display: flex;
+}
+
+footer p {
+  margin: 0 auto;
+  align-self: flex-end;
+  padding-bottom: 25px;
+  font-size: 13px;
+  font-family: 'Montserrat';
+  color: #008666;
+  font-weight: 550;
+  opacity: 0.7;
+}
+
+footer a {
+  color: dodgerblue;
+  opacity: 1;
+}
+
+.line-break {
+  display: inline;
+}
+
+
+/* __________________USER INPUT FORM__________________ */
+.user-form {
+  background-color: none;
+  height: 100px;
+  width: 960px;
+  padding-top: 23px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  font-size: 0px;
+}
+
+.user-form-box {
+  display: inline-block;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Add some margins for each label */
+.user-form label {
+  margin: 0px 10px 0px 0;
+  vertical-align: middle;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 26px;
+  padding-right: 10px;
+}
+
+.dots {
+  display: none;
+}
+
+.distance-input[type="number"]{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+}
+
+/* Remove blue halo on inputs */
+.user-form input:focus {
+    outline:none
+}
+
+/* Style the input fields */
+.user-form .distance-input {
+  vertical-align: middle;
+  width: 90px;
+  height: 54px;
+  margin: 0px 0px 0px 0;
+  padding-right: 6px;
+  padding-left: 15px;
+  background-color: #fff;
+  border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Style the metric chooser */
+#distance-unit {
+   display: inline-block;
+   vertical-align: middle;
+   width: 90px;
+   height: 54px;
+   font-size: 19px;
+   font-family: 'Montserrat';
+   font-weight: 600;
+   color: #000;
+   line-height: 1.3;
+   padding: 9px 22px 8px 1px;
+   margin: 0;
+   border: none;
+   border-radius: 0px;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   appearance: none;
+   background-color: #ffffff;
+   background-image: url('images/arrowdown.svg');
+   background-repeat: no-repeat, repeat;
+   background-position: right 11px top 50%, 0 0;
+   background-size: .65em auto, 100%;
+   cursor: pointer;
+}
+
+/* Style the submit button */
+.user-form .input-button {
+  vertical-align: middle;
+  height: 54px;
+  width: 75px;
+  padding: 0px;
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  font-size: 19px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.user-form .input-button:hover {
+  background-color: #007EF8;
+}
+
+
+/* __________________CONTENTS__________________U */
+
+.contents-all-wrapper {
+  text-align: center;
+  padding-top: 160px;
+  display: none
+  height: 3000px;
+}
+
+.content-slides {
+  width: 620px;
+  margin: 0 auto;
+}
+
+/* Make slides hidden by default */
+.content-wrapper {
+  display: none;
+}
+
+.active {
+  display: none;
+
+}
+
+.title-wrapper li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contents-all-wrapper h2 {
+  font-size: 23px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 38px;
+}
+
+.contents-all-wrapper img {
+  padding-top: 6px;
+  cursor: pointer;
+  height: 23px;
+}
+
+.contents-all-wrapper .arrow-left {
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contents-all-wrapper .arrow-right {
+  float: right;
+  vdisplay: inline-block;
+  vertical-align: middle;
+}
+
+.scenario-info {
+  font-size: 19px;
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 55px;
+  line-height: 26px;
+}
+
+.transport-name {
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.instance-number, .brackets {
+  font-weight: 500;
+}
+
+.emojis {
+  text-align: left;
+  font-size: 20px;
+  line-height: 23px;
+  padding-bottom: 30px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  font-weight: 550;
+  color: black;
+  opacity: 0.2;
+}
+
+.disclaimer a {
+  color: blue;
+}
+
+/* ______________________________RESPONSIVE__________________________________ */
+
+
+@media (max-width: 1000px) {
+
+  .user-form {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .content-list {
+    width: 90%;
+  }
+
+.user-form label {
+  display: block;
+  padding-bottom: 15px;
+  padding-right: 0px;
+}
+
+.landing-page-wrapper, .landing-page-wrapper img {
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.landing-page-wrapper {
+  padding-top: 110px;
+}
+
+.subheading {
+  font-size: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.kiwi-logo {
+  margin-top: 18px;
+  margin-left: 20px;
+  width: 45px;
+}
+
+.navbar {
+  margin-top: 16px;
+  margin-right: 20px;
+  width: 50px;
+  font-size: 18px;
+}
+
+.distance-input[type="number"], .user-form label {
+  font-size: 23px;
+}
+
+#distance-unit, .user-form .input-button {
+  font-size: 17px;
+}
+
+#distance-unit, .user-form .input-button, .user-form .distance-input {
+    height: 50px;
+
+}
+
+#distance-unit {
+  padding-left: 13px;
+  width: 120px;
+  background-position: right 20px top 50%, 0 0;
+}
+
+.user-form .distance-input {
+  width: 100px;
+}
+
+.user-form .input-button {
+  width: 95px;
+}
+
+.dots {
+  display: inline;
+}
+
+.cheese {
+  display: none;
+}
+
+footer {
+  top: 600px;
+}
+
+.line-break {
+  display: block;
+}
+
+.content-slides {
+  width: 100%;
+  padding-left: 21px;
+  padding-right: 21px;
+}
+
+.contents-all-wrapper {
+  padding-top: 40px;
+}
+
+.contents-all-wrapper h2 {
+  font-size: 18px;
+  padding-bottom: 25px;
+}
+
+.contents-all-wrapper img {
+  transform: translateY(-3px);
+}
+
+.scenario-info {
+  font-size: 15px;
+  line-height: 21px;
+  padding-bottom: 36px;
+}
+
+}

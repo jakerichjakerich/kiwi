@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwi - Carbon Calculator</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="responsive" href="responsive.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:bold' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:semibold' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- ______________TOP and MAIN wrapper______________ -->
+    <div class="top-wrapper">
+      <img class="kiwi-logo" src="images/kiwi.png">
+      <a class="navbar" href="https://www.jakerich.co.uk/carbon-calculator" target="_blank">Info</a>
+      <div class="landing-page-wrapper">
+        <img id="landing-page-image" src="images/co2mmuting-image.png">
+        <div class="subheading">
+          <p>Find out the impact of your commute, and what you can do to improve it.</p>
+        </div>
+      </div>
+        <form class="user-form" id="user-form">
+          <label for="email">My commute is<span class="dots">...</span></label>
+          <div class="user-form-box">
+            <input type="number" id="distance-input" class="distance-input" min=0 step="any" required name="distance" autocomplete="off" max="1000" autofocus>
+            <select id="distance-unit" name="distance-unit">
+                  <option value="miles">miles</option>
+                  <option value="kilometres">km</option>
+              </select>
+            <input class="input-button" type="submit" value="Go!">
+          </div>
+        </form>
+          <footer class='.footer'>
+            <p><span class="line-break">Don’t know how far? </span><span class="line-break">Enter your ZIP or Post codes <a href="https://www.mapdevelopers.com/distance_from_to.php" target="_blank">here!</a></span></p>
+          </footer>
+    </div>
+
+
+    <!-- ______________ALL CONTENTS______________ -->
+
+    <div class="contents-all-wrapper">
+      <ul class="content-slides">
+
+        <!-- ___________________________CONTENT 1_______________________________ -->
+        <li class="content-wrapper active">
+          <!-- SCENARIO -->
+          <div class="scenario-wrapper">
+            <!-- Title and direction arrows -->
+            <ul class="title-wrapper">
+              <li class="arrow arrow-left"><img src="images/arrowleft.svg"></li>
+              <li class="scenario-title"><h2>Your Commute in Basketballs</h2></li>
+              <li class="arrow arrow-right"><img src="images/arrowright.svg"></li>
+            </ul>
+            <!-- Info for scenario -->
+            <p class="scenario-info"> The award for the most sustainable NBA team presumably goes to the Phoenix Suns (#renewables), with the polluting Houston Rockets coming in last place (but Elon's working on it).  Your commute could fill this many basketballs with CO2 <strong>each day</strong>...
+            </p>
+          </div>
+
+          <!-- TRANSPORT LIST -->
+          <div class="transport-wrapper">
+            <!-- TRANSPORT TYPE: BIKE -->
+            <div class="transport-type">
+              <div class='transport-name'>Bike <span class='brackets'>(<span class="instance-number numbike"></span>)</span></div>
+              <p class="emojis bike-emoji">
+                🏀
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: SCOOTER -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Bike / Scooter <span class='brackets'>(<span class="instance-number numscooter"></span>)</span></div>
+              <p class="emojis scooter-emoji">
+                🏀
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: TRAIN -->
+            <div class="transport-type">
+              <div class='transport-name'>Train <span class='brackets'>(<span class="instance-number numtrain"></span>)</span></div>
+              <p class="emojis train-emoji">
+                🏀
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: EV -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Car <span class='brackets'>(<span class="instance-number numev"></span>)</span></div>
+              <p class="emojis ev-emoji">
+                🏀
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: BUS -->
+            <div class="transport-type">
+              <div class='transport-name'>Bus <span class='brackets'>(<span class="instance-number numbus"></span>)</span></div>
+              <p class="emojis bus-emoji">
+                🏀
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: CAR -->
+            <div class="transport-type">
+              <div class='transport-name'>Car <span class='brackets'>(<span class="instance-number numcar"></span>)</span></div>
+              <p class="emojis car-emoji">
+                🏀
+              </p>
+            </div>
+            <div class='disclaimer'>
+              <p>Disclaimer: Of course this isn't 100% accurate, but it's pretty close.</p>
+              <p>The data I used for transport carbon emissions is <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2018" target="_blank">here,</a> and <a href="https://ecf.com/sites/ecf.com/files/ECF_CO2_WEB.pdf" target="_blank">here</a>.</p>
+              <p>And no I haven't factored in cyclists diets...</p>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- ___________________________CONTENT 2_______________________________ -->
+        <li class="content-wrapper">
+          <!-- SCENARIO -->
+          <div class="scenario-wrapper">
+            <!-- Title and direction arrows -->
+            <ul class="title-wrapper">
+              <li class="arrow arrow-left"><img src="images/arrowleft.svg"></li>
+              <li class="scenario-title"><h2>Your Commute in <span class="cheese">Cheese </span>Burgers</h2></li>
+              <li class="arrow arrow-right"><img src="images/arrowright.svg"></li>
+            </ul>
+            <!-- Info for scenario -->
+            <p class="scenario-info"> XXX <strong>each month</strong>...
+            </p>
+          </div>
+
+          <!-- TRANSPORT LIST -->
+          <div class="transport-wrapper">
+            <!-- TRANSPORT TYPE: BIKE -->
+            <div class="transport-type">
+              <div class='transport-name'>Bike <span class='brackets'>(<span class="instance-number numbike"></span>)</span></div>
+              <p class="emojis bike-emoji">
+                🍔
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: SCOOTER -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Bike / Scooter <span class='brackets'>(<span class="instance-number numscooter"></span>)</span></div>
+              <p class="emojis scooter-emoji">
+                🍔
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: TRAIN -->
+            <div class="transport-type">
+              <div class='transport-name'>Train <span class='brackets'>(<span class="instance-number numtrain"></span>)</span></div>
+              <p class="emojis train-emoji">
+                🍔
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: EV -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Car <span class='brackets'>(<span class="instance-number numev"></span>)</span></div>
+              <p class="emojis ev-emoji">
+                🍔
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: BUS -->
+            <div class="transport-type">
+              <div class='transport-name'>Bus <span class='brackets'>(<span class="instance-number numbus"></span>)</span></div>
+              <p class="emojis bus-emoji">
+                🍔
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: CAR -->
+            <div class="transport-type">
+              <div class='transport-name'>Car <span class='brackets'>(<span class="instance-number numcar"></span>)</span></div>
+              <p class="emojis car-emoji">
+                🍔
+              </p>
+            </div>
+            <div class='disclaimer'>
+              <p>Disclaimer: Of course this isn't 100% accurate, but it's pretty close.</p>
+              <p>The data I used for transport carbon emissions is <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2018" target="_blank">here,</a> and <a href="https://ecf.com/sites/ecf.com/files/ECF_CO2_WEB.pdf" target="_blank">here</a>.</p>
+              <p>And no I haven't factored in cyclists diets...</p>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- ___________________________CONTENT 3_______________________________ -->
+        <li class="content-wrapper">
+          <!-- SCENARIO -->
+          <div class="scenario-wrapper">
+            <!-- Title and direction arrows -->
+            <ul class="title-wrapper">
+              <li class="arrow arrow-left"><img src="images/arrowleft.svg"></li>
+              <li class="scenario-title"><h2>Your Commute in Pine Trees</h2></li>
+              <li class="arrow arrow-right"><img src="images/arrowright.svg"></li>
+            </ul>
+            <!-- Info for scenario -->
+            <p class="scenario-info"> Tree's are the great vacuum cleaners of the natural world, and one pine tree can absorb 21 kg of CO<sub>2</sub> in a year. If your commute is going to be carbon neutral, you'll need this many pines to help you <strong>each year</strong>...
+            </p>
+          </div>
+
+          <!-- TRANSPORT LIST -->
+          <div class="transport-wrapper">
+            <!-- TRANSPORT TYPE: BIKE -->
+            <div class="transport-type">
+              <div class='transport-name'>Bike <span class='brackets'>(<span class="instance-number numbike"></span>)</span></div>
+              <p class="emojis bike-emoji">
+                🌲
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: SCOOTER -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Bike / Scooter <span class='brackets'>(<span class="instance-number numscooter"></span>)</span></div>
+              <p class="emojis scooter-emoji">
+                🌲
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: TRAIN -->
+            <div class="transport-type">
+              <div class='transport-name'>Train <span class='brackets'>(<span class="instance-number numtrain"></span>)</span></div>
+              <p class="emojis train-emoji">
+                🌲
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: EV -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Car <span class='brackets'>(<span class="instance-number numev"></span>)</span></div>
+              <p class="emojis ev-emoji">
+                🌲
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: BUS -->
+            <div class="transport-type">
+              <div class='transport-name'>Bus <span class='brackets'>(<span class="instance-number numbus"></span>)</span></div>
+              <p class="emojis bus-emoji">
+                🌲
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: CAR -->
+            <div class="transport-type">
+              <div class='transport-name'>Car <span class='brackets'>(<span class="instance-number numcar"></span>)</span></div>
+              <p class="emojis car-emoji">
+                🌲
+              </p>
+            </div>
+            <div class='disclaimer'>
+              <p>Disclaimer: Of course this isn't 100% accurate, but it's pretty close.</p>
+              <p>The data I used for transport carbon emissions is <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2018" target="_blank">here,</a> and <a href="https://ecf.com/sites/ecf.com/files/ECF_CO2_WEB.pdf" target="_blank">here</a>.</p>
+              <p>And no I haven't factored in cyclists diets...</p>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- ___________________________CONTENT 4_______________________________ -->
+        <li class="content-wrapper">
+          <!-- SCENARIO -->
+          <div class="scenario-wrapper">
+            <!-- Title and direction arrows -->
+            <ul class="title-wrapper">
+              <li class="arrow arrow-left"><img src="images/arrowleft.svg"></li>
+              <li class="scenario-title"><h2>Your Commute in Koalas</h2></li>
+              <li class="arrow arrow-right"><img src="images/arrowright.svg"></li>
+            </ul>
+            <!-- Info for scenario -->
+            <p class="scenario-info">Koalas look cute but they're actually pretty grumpy and mean. They also weigh about 12 kg, so the CO<sub>2</sub> produced from your commute <b>each year</b> weighs about as much this many of them...</p>
+          </div>
+
+          <!-- TRANSPORT LIST -->
+          <div class="transport-wrapper">
+            <!-- TRANSPORT TYPE: BIKE -->
+            <div class="transport-type">
+              <div class='transport-name'>Bike <span class='brackets'>(<span class="instance-number numbike"></span>)</span></div>
+              <p class="emojis bike-emoji">
+                🐨
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: SCOOTER -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Bike / Scooter <span class='brackets'>(<span class="instance-number numscooter"></span>)</span></div>
+              <p class="emojis scooter-emoji">
+                🐨
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: TRAIN -->
+            <div class="transport-type">
+              <div class='transport-name'>Train <span class='brackets'>(<span class="instance-number numtrain"></span>)</span></div>
+              <p class="emojis train-emoji">
+                🐨
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: EV -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Car <span class='brackets'>(<span class="instance-number numev"></span>)</span></div>
+              <p class="emojis ev-emoji">
+                🐨
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: BUS -->
+            <div class="transport-type">
+              <div class='transport-name'>Bus <span class='brackets'>(<span class="instance-number numbus"></span>)</span></div>
+              <p class="emojis bus-emoji">
+                🐨
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: CAR -->
+            <div class="transport-type">
+              <div class='transport-name'>Car <span class='brackets'>(<span class="instance-number numcar"></span>)</span></div>
+              <p class="emojis car-emoji">
+                🐨
+              </p>
+            </div>
+            <div class='disclaimer'>
+              <p>Disclaimer: Of course this isn't 100% accurate, but it's pretty close.</p>
+              <p>The data I used for transport carbon emissions is <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2018" target="_blank">here,</a> and <a href="https://ecf.com/sites/ecf.com/files/ECF_CO2_WEB.pdf" target="_blank">here</a>.</p>
+              <p>And no I haven't factored in cyclists diets...</p>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- ___________________________CONTENT 5_______________________________ -->
+        <li class="content-wrapper">
+          <!-- SCENARIO -->
+          <div class="scenario-wrapper">
+            <!-- Title and direction arrows -->
+            <ul class="title-wrapper">
+              <li class="arrow arrow-left"><img src="images/arrowleft.svg"></li>
+              <li class="scenario-title"><h2>Your Commute in Cable Cars</h2></li>
+              <li class="arrow arrow-right"><img src="images/arrowright.svg"></li>
+            </ul>
+            <!-- Info for scenario -->
+            <p class="scenario-info">XXX least used emoji <b>yearly</b>
+            </p>
+          </div>
+
+          <!-- TRANSPORT LIST -->
+          <div class="transport-wrapper">
+            <!-- TRANSPORT TYPE: BIKE -->
+            <div class="transport-type">
+              <div class='transport-name'>Bike <span class='brackets'>(<span class="instance-number numbike"></span>)</span></div>
+              <p class="emojis bike-emoji">
+                🚡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: SCOOTER -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Bike / Scooter <span class='brackets'>(<span class="instance-number numscooter"></span>)</span></div>
+              <p class="emojis scooter-emoji">
+                🚡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: TRAIN -->
+            <div class="transport-type">
+              <div class='transport-name'>Train <span class='brackets'>(<span class="instance-number numtrain"></span>)</span></div>
+              <p class="emojis train-emoji">
+                🚡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: EV -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Car <span class='brackets'>(<span class="instance-number numev"></span>)</span></div>
+              <p class="emojis ev-emoji">
+                🚡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: BUS -->
+            <div class="transport-type">
+              <div class='transport-name'>Bus <span class='brackets'>(<span class="instance-number numbus"></span>)</span></div>
+              <p class="emojis bus-emoji">
+                🚡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: CAR -->
+            <div class="transport-type">
+              <div class='transport-name'>Car <span class='brackets'>(<span class="instance-number numcar"></span>)</span></div>
+              <p class="emojis car-emoji">
+                🚡
+              </p>
+            </div>
+            <div class='disclaimer'>
+              <p>Disclaimer: Of course this isn't 100% accurate, but it's pretty close.</p>
+              <p>The data I used for transport carbon emissions is <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2018" target="_blank">here,</a> and <a href="https://ecf.com/sites/ecf.com/files/ECF_CO2_WEB.pdf" target="_blank">here</a>.</p>
+              <p>And no I haven't factored in cyclists diets...</p>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- ___________________________CONTENT 6_______________________________ -->
+        <li class="content-wrapper">
+          <!-- SCENARIO -->
+          <div class="scenario-wrapper">
+            <!-- Title and direction arrows -->
+            <ul class="title-wrapper">
+              <li class="arrow arrow-left"><img src="images/arrowleft.svg"></li>
+              <li class="scenario-title"><h2>Your Commute in Sushi</h2></li>
+              <li class="arrow arrow-right"><img src="images/arrowright.svg"></li>
+            </ul>
+            <!-- Info for scenario -->
+            <p class="scenario-info"> XXX <b>daily</b>
+            </p>
+          </div>
+
+          <!-- TRANSPORT LIST -->
+          <div class="transport-wrapper">
+            <!-- TRANSPORT TYPE: BIKE -->
+            <div class="transport-type">
+              <div class='transport-name'>Bike <span class='brackets'>(<span class="instance-number numbike"></span>)</span></div>
+              <p class="emojis bike-emoji">
+                🍣
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: SCOOTER -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Bike / Scooter <span class='brackets'>(<span class="instance-number numscooter"></span>)</span></div>
+              <p class="emojis scooter-emoji">
+                🍣
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: TRAIN -->
+            <div class="transport-type">
+              <div class='transport-name'>Train <span class='brackets'>(<span class="instance-number numtrain"></span>)</span></div>
+              <p class="emojis train-emoji">
+                🍣
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: EV -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Car <span class='brackets'>(<span class="instance-number numev"></span>)</span></div>
+              <p class="emojis ev-emoji">
+                🍣
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: BUS -->
+            <div class="transport-type">
+              <div class='transport-name'>Bus <span class='brackets'>(<span class="instance-number numbus"></span>)</span></div>
+              <p class="emojis bus-emoji">
+                🍣
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: CAR -->
+            <div class="transport-type">
+              <div class='transport-name'>Car <span class='brackets'>(<span class="instance-number numcar"></span>)</span></div>
+              <p class="emojis car-emoji">
+                🍣
+              </p>
+            </div>
+            <div class='disclaimer'>
+              <p>Disclaimer: Of course this isn't 100% accurate, but it's pretty close.</p>
+              <p>The data I used for transport carbon emissions is <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2018" target="_blank">here,</a> and <a href="https://ecf.com/sites/ecf.com/files/ECF_CO2_WEB.pdf" target="_blank">here</a>.</p>
+              <p>And no I haven't factored in cyclists diets...</p>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- ___________________________CONTENT 6_______________________________ -->
+        <li class="content-wrapper">
+          <!-- SCENARIO -->
+          <div class="scenario-wrapper">
+            <!-- Title and direction arrows -->
+            <ul class="title-wrapper">
+              <li class="arrow arrow-left"><img src="images/arrowleft.svg"></li>
+              <li class="scenario-title"><h2>Your Commute in Pufferfish</h2></li>
+              <li class="arrow arrow-right"><img src="images/arrowright.svg"></li>
+            </ul>
+            <!-- Info for scenario -->
+            <p class="scenario-info"> Google wouldn't reveal the volume of a Pufferfish, but some back-of-the-envelope calculations mean the CO<sub>2</sub> from your <b>daily</b> commute would fill about this many angry Puffers...
+            </p>
+          </div>
+
+          <!-- TRANSPORT LIST -->
+          <div class="transport-wrapper">
+            <!-- TRANSPORT TYPE: BIKE -->
+            <div class="transport-type">
+              <div class='transport-name'>Bike <span class='brackets'>(<span class="instance-number numbike"></span>)</span></div>
+              <p class="emojis bike-emoji">
+                🐡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: SCOOTER -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Bike / Scooter <span class='brackets'>(<span class="instance-number numscooter"></span>)</span></div>
+              <p class="emojis scooter-emoji">
+                🐡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: TRAIN -->
+            <div class="transport-type">
+              <div class='transport-name'>Train <span class='brackets'>(<span class="instance-number numtrain"></span>)</span></div>
+              <p class="emojis train-emoji">
+                🐡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: EV -->
+            <div class="transport-type">
+              <div class='transport-name'>Electric Car <span class='brackets'>(<span class="instance-number numev"></span>)</span></div>
+              <p class="emojis ev-emoji">
+                🐡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: BUS -->
+            <div class="transport-type">
+              <div class='transport-name'>Bus <span class='brackets'>(<span class="instance-number numbus"></span>)</span></div>
+              <p class="emojis bus-emoji">
+                🐡
+              </p>
+            </div>
+            <!-- TRANSPORT TYPE: CAR -->
+            <div class="transport-type">
+              <div class='transport-name'>Car <span class='brackets'>(<span class="instance-number numcar"></span>)</span></div>
+              <p class="emojis car-emoji">
+                🐡
+              </p>
+            </div>
+            <div class='disclaimer'>
+              <p>Disclaimer: Of course this isn't 100% accurate, but it's pretty close.</p>
+              <p>The data I used for transport carbon emissions is <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2018" target="_blank">here,</a> and <a href="https://ecf.com/sites/ecf.com/files/ECF_CO2_WEB.pdf" target="_blank">here</a>.</p>
+              <p>And no I haven't factored in cyclists diets...</p>
+            </div>
+          </div>
+        </li>
+
+
+
+
+
+
+
+<!-- __________________END OF TRANSPORT LIST_____________________ -->
+      </ul>
+    </div>
+
+<!-- __________________DISCLAIMER?_____________________ -->
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
